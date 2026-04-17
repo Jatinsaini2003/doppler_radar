@@ -16,8 +16,10 @@ st.caption("Real-time Bird vs Drone Detection using Micro-Doppler Signals")
 # Load Model
 # ----------------------------
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(os.getcwd(), 'model', 'model.pkl')
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model_path = os.path.join(BASE_DIR, "model", "model.pkl")
+
 
 with open(model_path, "rb") as f:
     model = pickle.load(f)
